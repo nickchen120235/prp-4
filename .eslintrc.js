@@ -21,12 +21,12 @@ module.exports = {
     '@typescript-eslint'
   ],
   'rules': {
-    'indent': ['warn', 2, { "SwitchCase": 1 }],
+    'indent': ['warn', 2, { 'SwitchCase': 1 }],
     'quotes': ['warn', 'single'],
     'semi': ['warn', 'never'],
-    'no-template-curly-in-string': ['error', 'always'],
+    'no-template-curly-in-string': ['error'],
     'eqeqeq': ['error', 'always'],
-    'no-console': ['warn', 'always'],
+    'no-console': ['warn', {allow: ['warn', 'error']}],
     '@typescript-eslint/explicit-module-boundary-types': ['off']
   }
 }
