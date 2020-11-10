@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/prp-4/static/css/main.fab90f8b.chunk.css",
+    "main.js": "/prp-4/static/js/main.daa00f6d.chunk.js",
+    "main.js.map": "/prp-4/static/js/main.daa00f6d.chunk.js.map",
+    "runtime-main.js": "/prp-4/static/js/runtime-main.16d37fa5.js",
+    "runtime-main.js.map": "/prp-4/static/js/runtime-main.16d37fa5.js.map",
+    "static/js/2.994ade1d.chunk.js": "/prp-4/static/js/2.994ade1d.chunk.js",
+    "static/js/2.994ade1d.chunk.js.map": "/prp-4/static/js/2.994ade1d.chunk.js.map",
+    "static/js/3.fbd53509.chunk.js": "/prp-4/static/js/3.fbd53509.chunk.js",
+    "static/js/3.fbd53509.chunk.js.map": "/prp-4/static/js/3.fbd53509.chunk.js.map",
+    "index.html": "/prp-4/index.html",
+    "static/css/main.fab90f8b.chunk.css.map": "/prp-4/static/css/main.fab90f8b.chunk.css.map",
+    "static/js/2.994ade1d.chunk.js.LICENSE.txt": "/prp-4/static/js/2.994ade1d.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.16d37fa5.js",
+    "static/js/2.994ade1d.chunk.js",
+    "static/css/main.fab90f8b.chunk.css",
+    "static/js/main.daa00f6d.chunk.js"
+  ]
+}
