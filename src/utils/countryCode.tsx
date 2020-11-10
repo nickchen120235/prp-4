@@ -1,4 +1,4 @@
-const countryCode = {
+const countryCode: {[index: string]: string} = {
   CHN: 'China',
   BTN: 'Bhutan',
   TMP: 'Timor-Leste',

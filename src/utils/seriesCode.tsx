@@ -1,4 +1,4 @@
-const seriesCode = {
+const seriesCode: {[index: string]: string} = {
   NY_GDP_MKTP_KD_ZG: 'GDP growth (annual %)',
   NY_GDP_MKTP_CD: 'GDP (current US$)',
   IT_NET_USER_P2: 'Internet users (per 100 people)',
