@@ -10,7 +10,7 @@ import countryCode from './utils/countryCode'
 const App = () => {
   const classes = styleClass()
 
-  const [country, setCountry] = useState('')
+  const [country, setCountry] = useState('CHN')
   const [countryOpen, setCountryOpen] = useState(false)
 
   const handleCountryClose = (value: string) => {
