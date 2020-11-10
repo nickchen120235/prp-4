@@ -4,10 +4,14 @@ import { AppBar, Toolbar, Typography, Paper, Button } from '@material-ui/core'
 import { CountryDialog } from './components/CountryDialog'
 import { AxisDialog } from './components/AxisDialog'
 
+import { CorrelationGraph } from './components/CorrelationGraph'
+
 import data from './utils/data'
 import styleClass from './utils/styles'
 import countryCode from './utils/countryCode'
 import seriesCode from './utils/seriesCode'
+
+import './App.css' // center align the charts
 
 const App = () => {
   const classes = styleClass()
@@ -43,7 +47,8 @@ const App = () => {
       <Paper className={classes.paper}>
         <Button onClick={() => setCountryOpen(true)}>Select Country/Region: {countryCode[country]}</Button><br/>
         <Button onClick={() => setXOpen(true)}>Select X Axis: {seriesCode[x]}</Button>
-        <Button onClick={() => setYOpen(true)}>Select Y Axis: {seriesCode[y]}</Button>
+        <Button onClick={() => setYOpen(true)}>Select Y Axis: {seriesCode[y]}</Button><br/>
+        <CorrelationGraph country={country} x={x} y={y} />
       </Paper>
       <CountryDialog open={countryOpen} selected={country} onClose={handleCountryClose} />
       <AxisDialog open={xOpen} selected={x} onClose={handleXClose} axis='x' />
