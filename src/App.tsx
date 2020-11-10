@@ -18,9 +18,9 @@ const App = () => {
 
   const [country, setCountry] = useState('CHN')
   const [countryOpen, setCountryOpen] = useState(false)
-  const [x, setX] = useState('')
+  const [x, setX] = useState('NY_GDP_MKTP_KD_ZG')
   const [xOpen, setXOpen] = useState(false)
-  const [y, setY] = useState('')
+  const [y, setY] = useState('NY_GDP_MKTP_KD_ZG')
   const [yOpen, setYOpen] = useState(false)
 
   const handleCountryClose = (value: string) => {
