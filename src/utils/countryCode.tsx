@@ -1,4 +1,4 @@
-const counrtyCode = {
+const countryCode = {
   CHN: 'China',
   BTN: 'Bhutan',
   TMP: 'Timor-Leste',
@@ -216,4 +216,4 @@ const counrtyCode = {
   MNE: 'Montenegro'
 }
 
-export default counrtyCode
+export default countryCode
