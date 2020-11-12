@@ -11,6 +11,7 @@ import data from './utils/data'
 import styleClass from './utils/styles'
 import countryCode from './utils/countryCode'
 import seriesCode from './utils/seriesCode'
+import { correlation } from './utils/math'
 
 import './App.css' // center align the charts
 
@@ -41,6 +42,8 @@ const App = () => {
     setCorrelationHasNaN(value)
   }
 
+  const cor = correlation(data[country][x], data[country][y])?.toPrecision(4)
+
   return(
     <>
       <AppBar>
@@ -51,9 +54,10 @@ const App = () => {
       <Toolbar />
       <Paper className={classes.paper}>
         <Button onClick={() => setCountryOpen(true)}>Select Country/Region: {countryCode[country]}</Button><br/>
-        <Button onClick={() => setXOpen(true)}>Select X Axis: {seriesCode[x]}</Button>
+        <Button onClick={() => setXOpen(true)}>Select X Axis: {seriesCode[x]}</Button><br/>
         <Button onClick={() => setYOpen(true)}>Select Y Axis: {seriesCode[y]}</Button><br/>
-        {correlationHasNaN? <Alert className={classes.paper} severity='info'><AlertTitle>Data Missing</AlertTitle>Some values doesn&#39;t exist in the dataset. Those dots won&#39;t be shown.</Alert>: null}
+        <Typography className={classes.cor} display='inline' variant='body1' noWrap>Correlation: {cor? cor: null}</Typography>
+        {correlationHasNaN? <Alert className={classes.alert} severity='info'><AlertTitle>Data Missing</AlertTitle>Some values doesn&#39;t exist in the dataset. Those dots won&#39;t be shown.</Alert>: null}
         <CorrelationGraph country={country} x={x} y={y} hasNaN={hasNaN_C} />
       </Paper>
       <CountryDialog open={countryOpen} selected={country} onClose={handleCountryClose} />

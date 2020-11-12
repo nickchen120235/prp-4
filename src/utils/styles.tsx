@@ -6,6 +6,10 @@ const styleClass = makeStyles(theme => ({
     marginRight: 'auto'
   },
   paper: {
+    margin: '5px',
+    width: '50%'
+  },
+  alert: {
     margin: '5px'
   },
   countryDialog: {
@@ -14,6 +18,9 @@ const styleClass = makeStyles(theme => ({
   },
   countryButton: {
     minWidth: '20px'
+  },
+  cor: {
+    marginLeft: '7px'
   }
 }))
 
