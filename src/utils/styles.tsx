@@ -7,7 +7,7 @@ const styleClass = makeStyles(theme => ({
   },
   paper: {
     margin: '5px',
-    width: '50%'
+    width: '100%'
   },
   alert: {
     margin: '5px'
@@ -21,6 +21,13 @@ const styleClass = makeStyles(theme => ({
   },
   cor: {
     marginLeft: '7px'
+  },
+  graphs: {
+    columns: 2,
+    width: '100%'
+  },
+  axistitle: {
+    margin: '0 5px'
   }
 }))
 
