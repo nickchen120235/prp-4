@@ -22,14 +22,17 @@ const styleClass = makeStyles(theme => ({
     columns: 2,
     width: '100%'
   },
-  axistitle: {
-    margin: '0 5px'
-  },
   viewContainer: {
     margin: '0 auto',
     columns: 2,
     width: '98%',
     height: 700
+  },
+  viewContainer2: {
+    margin: '0 auto',
+    columns: 2,
+    width: '98%',
+    height: 600
   },
   subviewContainer: {
     width: '100%',

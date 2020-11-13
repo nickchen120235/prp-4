@@ -25,7 +25,7 @@ const Top10Graph = (props: Top10GraphProps) => {
     value: numericData[index]
   }))
   return(
-    <ResponsiveContainer height={500} width='40%' id='topleast'>
+    <ResponsiveContainer height={500} width={550}>
       <BarChart data={renderData}>
         <CartesianGrid strokeDasharray='3 3' />
         <XAxis dataKey='country' />

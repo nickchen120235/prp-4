@@ -16,7 +16,7 @@ const Least10Graph = (props: Least10GraphProps) => {
   for (const i in data) {
     numericData.push(data[i][category][year-2010])
   }
-  numericData = numericData.filter(value => !isNaN(value)).sort((a, b) => a-b).slice(0, 10)
+  numericData = numericData.filter(value => !isNaN(value)).sort((a, b) => a-b).slice(0, 10).reverse()
   
   const countryData = numericData.map(value => Object.keys(data).find(country => data[country][category][year-2010] === value))
   
@@ -25,7 +25,7 @@ const Least10Graph = (props: Least10GraphProps) => {
     value: numericData[index]
   }))
   return(
-    <ResponsiveContainer height={500} width='40%' id='topleast'>
+    <ResponsiveContainer height={500} width={550}>
       <BarChart data={renderData}>
         <CartesianGrid strokeDasharray='3 3' />
         <XAxis dataKey='country' orientation={numericData.every(value => value<0)? 'top': 'bottom'} />
