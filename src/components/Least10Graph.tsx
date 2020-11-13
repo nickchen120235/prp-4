@@ -5,18 +5,18 @@ import data from '../utils/data'
 import countryCode from '../utils/countryCode'
 import seriesCode from '../utils/seriesCode'
 
-interface Top10GraphProps {
+interface Least10GraphProps {
   category: string
   year: number
 }
 
-const Top10Graph = (props: Top10GraphProps) => {
+const Least10Graph = (props: Least10GraphProps) => {
   const { category, year } = props
   let numericData: number[] = []
   for (const i in data) {
     numericData.push(data[i][category][year-2010])
   }
-  numericData = numericData.filter(value => !isNaN(value)).sort((a, b) => b-a).slice(0, 10)
+  numericData = numericData.filter(value => !isNaN(value)).sort((a, b) => a-b).slice(0, 10)
   
   const countryData = numericData.map(value => Object.keys(data).find(country => data[country][category][year-2010] === value))
   
@@ -28,7 +28,7 @@ const Top10Graph = (props: Top10GraphProps) => {
     <ResponsiveContainer height={500} width='40%' id='topleast'>
       <BarChart data={renderData}>
         <CartesianGrid strokeDasharray='3 3' />
-        <XAxis dataKey='country' />
+        <XAxis dataKey='country' orientation={numericData.every(value => value<0)? 'top': 'bottom'} />
         <YAxis domain={[dataMin => dataMin<0? Math.ceil(dataMin)-1: 0, dataMax => dataMax<0? 0: Math.ceil(dataMax)]} />
         <Tooltip labelFormatter={label => countryCode[label]} />
         <Legend />
@@ -38,4 +38,4 @@ const Top10Graph = (props: Top10GraphProps) => {
   )
 }
 
-export default Top10Graph
+export default Least10Graph

@@ -7,6 +7,8 @@ import { AxisDialog } from './components/AxisDialog'
 
 import { CorrelationGraph } from './components/CorrelationGraph'
 import AxisLinegraph from './components/AxisLineGraph'
+import Top10Graph from './components/Top10Graph'
+import Least10Graph from './components/Least10Graph'
 
 import data from './utils/data'
 import styleClass from './utils/styles'
@@ -73,6 +75,8 @@ const App = () => {
           </Paper>
         </Container>
       </Container>
+      <Top10Graph category={x} year={2010} />
+      <Least10Graph category={x} year={2010} />
       <CountryDialog open={countryOpen} selected={country} onClose={handleCountryClose} />
       <AxisDialog open={xOpen} selected={x} onClose={handleXClose} axis='x' />
       <AxisDialog open={yOpen} selected={y} onClose={handleYClose} axis='y' />
