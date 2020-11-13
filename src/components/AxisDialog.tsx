@@ -2,7 +2,6 @@ import React from 'react'
 import { Dialog, DialogTitle, Container, Button, Typography } from '@material-ui/core'
 
 import seriesCode from '../utils/seriesCode'
-import styleClasses from '../utils/styles'
 
 interface AxisDialogProps {
   open: boolean
@@ -14,7 +13,6 @@ interface AxisDialogProps {
 export const AxisDialog = (props: AxisDialogProps) => {
   const description = Object.values(seriesCode)
   const { open, selected, onClose, axis } = props
-  const classes = styleClasses()
 
   const handleClose = () => onClose(selected)
   const handleClick = (name: string) => {

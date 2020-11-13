@@ -4,7 +4,6 @@ import { Alert, AlertTitle } from '@material-ui/lab'
 
 import { CountryDialog } from './components/CountryDialog'
 import { AxisDialog } from './components/AxisDialog'
-import SeriesDialog from './components/SeriesDialog'
 
 import { CorrelationGraph } from './components/CorrelationGraph'
 import AxisLinegraph from './components/AxisLineGraph'
@@ -32,7 +31,6 @@ const App = () => {
 
   const [rankingSeries, setRankingSeries] = useState('NY_GDP_MKTP_KD_ZG')
   const [rankingYear, setRankingYear] = useState(2010)
-  const [rankingOpen, setRankingOpen] = useState(false)
 
   const handleCountryClose = (value: string) => {
     setCountryOpen(false)
@@ -48,11 +46,6 @@ const App = () => {
   }
   const hasNaN_C = (value: boolean) => {
     setCorrelationHasNaN(value)
-  }
-
-  const handleRankingClose = (value: string) => {
-    setRankingOpen(false)
-    setRankingSeries(value)
   }
 
   const cor = Math.abs(correlation(data[country][x], data[country][y])).toPrecision(4)
@@ -109,7 +102,6 @@ const App = () => {
       <CountryDialog open={countryOpen} selected={country} onClose={handleCountryClose} />
       <AxisDialog open={xOpen} selected={x} onClose={handleXClose} axis='x' />
       <AxisDialog open={yOpen} selected={y} onClose={handleYClose} axis='y' />
-      <SeriesDialog open={rankingOpen} selected={rankingSeries} onClose={handleRankingClose} />
     </>
   )
 }
