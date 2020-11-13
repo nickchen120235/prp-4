@@ -10,7 +10,7 @@ interface AxisDialogProps {
   axis: 'x' | 'y'
 }
 
-export const AxisDialog = (props: AxisDialogProps) => {
+const AxisDialog = (props: AxisDialogProps) => {
   const description = Object.values(seriesCode)
   const { open, selected, onClose, axis } = props
 
@@ -30,3 +30,5 @@ export const AxisDialog = (props: AxisDialogProps) => {
     </Dialog>
   )
 }
+
+export default AxisDialog

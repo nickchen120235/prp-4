@@ -14,7 +14,7 @@ interface CorrelationGraphProps {
 const years = ['2010', '2011', '2012', '2013', '2014']
 const colors = ['#003f5c', '#58508d', '#bc5090', '#ff6361', '#ffa600']
 
-export const CorrelationGraph = (props: CorrelationGraphProps) => {
+const CorrelationGraph = (props: CorrelationGraphProps) => {
   const { country, x, y, hasNaN } = props
   const renderData = data[country][x].map((value, index) => ([{
     x: value,
@@ -39,3 +39,5 @@ export const CorrelationGraph = (props: CorrelationGraphProps) => {
     </ResponsiveContainer>
   )
 }
+
+export default CorrelationGraph

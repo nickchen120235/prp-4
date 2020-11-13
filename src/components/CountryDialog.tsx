@@ -10,7 +10,7 @@ interface CountryDialogProps {
   onClose: (value: string) => void
 }
 
-export const CountryDialog = (props: CountryDialogProps) => {
+const CountryDialog = (props: CountryDialogProps) => {
   const description = Object.values(countryCode).sort()
   const { open, selected, onClose } = props
   const classes = styleClasses()
@@ -31,3 +31,5 @@ export const CountryDialog = (props: CountryDialogProps) => {
     </Dialog>
   )
 }
+
+export default CountryDialog

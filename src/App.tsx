@@ -2,10 +2,10 @@ import React, { useState } from 'react'
 import { AppBar, Toolbar, Typography, Paper, Button, Container, FormControl, InputLabel, Select, MenuItem } from '@material-ui/core'
 import { Alert, AlertTitle } from '@material-ui/lab'
 
-import { CountryDialog } from './components/CountryDialog'
-import { AxisDialog } from './components/AxisDialog'
+import CountryDialog from './components/CountryDialog'
+import AxisDialog from './components/AxisDialog'
 
-import { CorrelationGraph } from './components/CorrelationGraph'
+import CorrelationGraph from './components/CorrelationGraph'
 import AxisLinegraph from './components/AxisLineGraph'
 import Top10Graph from './components/Top10Graph'
 import Least10Graph from './components/Least10Graph'
