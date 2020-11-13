@@ -43,7 +43,7 @@ const App = () => {
     setCorrelationHasNaN(value)
   }
 
-  const cor = correlation(data[country][x], data[country][y])?.toPrecision(4)
+  const cor = Math.abs(correlation(data[country][x], data[country][y])).toPrecision(4)
 
   return(
     <>
@@ -58,7 +58,7 @@ const App = () => {
           <Button onClick={() => setCountryOpen(true)}>Select Country/Region: {countryCode[country]}</Button><br/>
           <Button onClick={() => setXOpen(true)}>Select X Axis: {seriesCode[x]}</Button><br/>
           <Button onClick={() => setYOpen(true)}>Select Y Axis: {seriesCode[y]}</Button><br/>
-          <Typography className={classes.cor} display='inline' variant='body1' noWrap>Correlation: {cor? cor: null}</Typography>
+          <Typography className={classes.cor} display='inline' variant='body1' noWrap>Absolute Correlation: {correlationHasNaN? null: cor}</Typography>
           {correlationHasNaN? <Alert className={classes.alert} severity='info'><AlertTitle>Data Missing</AlertTitle>Some values doesn&#39;t exist in the dataset. Those dots won&#39;t be shown.</Alert>: null}
           <CorrelationGraph country={country} x={x} y={y} hasNaN={hasNaN_C} />
         </Paper>
