@@ -24,12 +24,14 @@ const styleClass = makeStyles(theme => ({
   },
   viewContainer: {
     margin: '0 auto',
+    marginTop: '5px',
     columns: 2,
     width: '98%',
     height: 700
   },
   viewContainer2: {
     margin: '0 auto',
+    marginTop: '5px',
     columns: 2,
     width: '98%',
     height: 600
