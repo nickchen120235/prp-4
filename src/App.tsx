@@ -9,6 +9,8 @@ import CorrelationGraph from './components/CorrelationGraph'
 import AxisLinegraph from './components/AxisLineGraph'
 import Top10Graph from './components/Top10Graph'
 import Least10Graph from './components/Least10Graph'
+import LaborGraph from './components/LaborGraph'
+import LaborGraphWithLegend from './components/LaborGraphWithLegend'
 
 import data from './utils/data'
 import styleClass from './utils/styles'
@@ -71,6 +73,25 @@ const App = () => {
           <AxisLinegraph country={country} axis={x} />
           <Button onClick={() => setYOpen(true)}>Select Y Axis: {seriesCode[y]}</Button><br/>
           <AxisLinegraph country={country} axis={y} />
+        </Container>
+      </Paper>
+      <Paper className={classes.viewContainer5}>
+  <Typography variant='h6' align='center'>Employment Status: {countryCode[country]}</Typography>
+        <Container maxWidth={false} className={classes.labor1}>
+          <LaborGraph country={country} year={2010} id='labor1' />
+          <Typography variant='body1' align='center'>2010</Typography>
+        </Container>
+        <Container maxWidth={false} className={classes.labor2}>
+          <LaborGraph country={country} year={2011} id='labor2' />
+          <Typography variant='body1' align='center'>2011</Typography>
+        </Container>
+        <Container maxWidth={false} className={classes.labor3}>
+          <LaborGraph country={country} year={2012} id='labor3' />
+          <Typography variant='body1' align='center'>2012</Typography>
+        </Container>
+        <Container maxWidth={false} className={classes.labor4}>
+          <LaborGraphWithLegend country={country} year={2013} id='labor4' />
+          <Typography variant='body1' align='center'>2013</Typography>
         </Container>
       </Paper>
       <Paper className={classes.viewContainer2}>

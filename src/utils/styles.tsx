@@ -36,9 +36,35 @@ const styleClass = makeStyles(theme => ({
     width: '98%',
     height: 600
   },
+  viewContainer5: {
+    margin: '0 auto',
+    marginTop: '5px',
+    width: '98%',
+    height: 400,
+  },
   subviewContainer: {
     width: '100%',
     height: 'inherit'
+  },
+  labor1: {
+    width: '15%',
+    padding: '0 10px 0 0',
+    float: 'left'
+  },
+  labor2: {
+    width: '15%',
+    padding: '0 10px 0 0',
+    float: 'left'
+  },
+  labor3: {
+    width: '15%',
+    padding: '0 10px 0 0',
+    float: 'left'
+  },
+  labor4: {
+    width: '55%',
+    padding: '0 10px 0 0',
+    float: 'right'
   }
 }))
 
