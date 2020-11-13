@@ -25,7 +25,7 @@ const Least10Graph = (props: Least10GraphProps) => {
     value: numericData[index]
   }))
   return(
-    <ResponsiveContainer height={500} width={550}>
+    <ResponsiveContainer height={500} width='80%'>
       <BarChart data={renderData}>
         <CartesianGrid strokeDasharray='3 3' />
         <XAxis dataKey='country' orientation={numericData.every(value => value<0)? 'top': 'bottom'} />
