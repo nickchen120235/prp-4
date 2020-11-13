@@ -1,5 +1,5 @@
 import React from 'react'
-import { ResponsiveContainer, PieChart, Pie, Legend, Tooltip } from 'recharts'
+import { ResponsiveContainer, PieChart, Pie, Tooltip } from 'recharts'
 
 import data from '../utils/data'
 

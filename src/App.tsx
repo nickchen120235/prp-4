@@ -76,7 +76,7 @@ const App = () => {
         </Container>
       </Paper>
       <Paper className={classes.viewContainer5}>
-  <Typography variant='h6' align='center'>Employment Status: {countryCode[country]}</Typography>
+        <Typography variant='h6' align='center'>Employment Status: {countryCode[country]}</Typography>
         <Container maxWidth={false} className={classes.labor1}>
           <LaborGraph country={country} year={2010} id='labor1' />
           <Typography variant='body1' align='center'>2010</Typography>
