@@ -55,26 +55,20 @@ const App = () => {
         </Toolbar>
       </AppBar>
       <Toolbar />
-      <Container className={classes.graphs} maxWidth={false}>
-        <Paper className={classes.paper}>
+      <Paper className={classes.viewContainer}>
+        <Container maxWidth={false} className={classes.subviewContainer} >
           <Button onClick={() => setCountryOpen(true)}>Select Country/Region: {countryCode[country]}</Button><br/>
-          <Button onClick={() => setXOpen(true)}>Select X Axis: {seriesCode[x]}</Button><br/>
-          <Button onClick={() => setYOpen(true)}>Select Y Axis: {seriesCode[y]}</Button><br/>
-          <Typography className={classes.cor} display='inline' variant='body1' noWrap>Absolute Correlation: {correlationHasNaN? null: cor}</Typography>
           {correlationHasNaN? <Alert className={classes.alert} severity='info'><AlertTitle>Data Missing</AlertTitle>Some values doesn&#39;t exist in the dataset. Those dots won&#39;t be shown.</Alert>: null}
-          <CorrelationGraph country={country} x={x} y={y} hasNaN={hasNaN_C} />
-        </Paper>
-        <Container className={classes.paper}>
-          <Paper className={classes.paper}>
-            <Typography className={classes.axistitle} variant='h6'>X Axis Data</Typography>
-            <AxisLinegraph country={country} axis={x} />
-          </Paper>
-          <Paper className={classes.paper}>
-            <Typography className={classes.axistitle} variant='h6'>Y Axis Data</Typography>
-            <AxisLinegraph country={country} axis={y} />
-          </Paper>
+          <Typography className={classes.cor} display='inline' variant='body1' noWrap>Absolute Correlation: {correlationHasNaN? null: cor}</Typography>
+          <CorrelationGraph country={country} x={x} y={y} hasNaN={hasNaN_C} /><br/>
         </Container>
-      </Container>
+        <Container maxWidth={false} className={classes.subviewContainer}>
+          <Button onClick={() => setXOpen(true)}>Select X Axis: {seriesCode[x]}</Button><br/>
+          <AxisLinegraph country={country} axis={x} />
+          <Button onClick={() => setYOpen(true)}>Select Y Axis: {seriesCode[y]}</Button><br/>
+          <AxisLinegraph country={country} axis={y} />
+        </Container>
+      </Paper>
       <Top10Graph category={x} year={2010} />
       <Least10Graph category={x} year={2010} />
       <CountryDialog open={countryOpen} selected={country} onClose={handleCountryClose} />

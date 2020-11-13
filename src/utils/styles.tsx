@@ -5,10 +5,6 @@ const styleClass = makeStyles(theme => ({
     marginLeft: 'auto',
     marginRight: 'auto'
   },
-  paper: {
-    margin: '5px',
-    width: '100%'
-  },
   alert: {
     margin: '5px'
   },
@@ -28,6 +24,16 @@ const styleClass = makeStyles(theme => ({
   },
   axistitle: {
     margin: '0 5px'
+  },
+  viewContainer: {
+    margin: '0 auto',
+    columns: 2,
+    width: '98%',
+    height: 700
+  },
+  subviewContainer: {
+    width: '100%',
+    height: 'inherit'
   }
 }))
 
